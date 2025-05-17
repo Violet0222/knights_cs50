@@ -20,7 +20,7 @@ knowledge0 = And(
     Not(And(CKnight, CKnave)),
     
     Implication(AKnight, And(AKnight,AKnave)),
-    Implication(AKnave, Not(And(BKnight,BKnave))),
+    Implication(AKnave, Not(And(AKnight,AKnave))),
 )
 
 # Puzzle 1
@@ -45,11 +45,11 @@ knowledge2 = And(
     Or(BKnight, BKnave),
     Not(And(BKnight, BKnave)),
     
-    Implication(AKnight, Or(And(AKnave, BKnave),And(AKnight,BKnight))),
-    Implication(AKnave, Not(Or(And(AKnave, BKnave),And(AKnight,BKnight)))),
+    Implication(AKnight, Or(And(AKnave, BKnave), And(AKnight, BKnight))),
+    Implication(AKnave, Not(Or(And(AKnave, BKnave), And(AKnight, BKnight)))),
                 
-    Implication(BKnave, Or(And(AKnave, BKnave),And(AKnight,BKnight))),
-    Implication(BKnight, Not(Or(And(AKnave, BKnave),And(AKnight,BKnight))))          
+    Implication(BKnave, Or(And(AKnave, BKnave), And(AKnight, BKnight))),
+    Implication(BKnight, Not(Or(And(AKnave, BKnave), And(AKnight, BKnight))))          
 )
 
 # Puzzle 3
